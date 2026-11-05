@@ -12,6 +12,12 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v4
+
+      # ubuntu-latest ya no trae terraform preinstalado (imagen Ubuntu 26)
+      - name: 'Setup Terraform'
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
       
       - name: 'Write Config & Key Files'
         run: |
