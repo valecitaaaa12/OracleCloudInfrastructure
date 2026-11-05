@@ -60,6 +60,6 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
 
-      # Iteracion 1 (como en el video): solo plan. El apply se anade despues.
-      # - name: Terraform Apply
-      #   run: terraform apply -auto-approve
+      # Iteracion 2 (como en el video): se anade terraform apply
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
