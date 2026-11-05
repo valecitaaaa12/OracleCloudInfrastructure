@@ -1,0 +1,16 @@
+﻿# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars.backup
+# .terraform.lock.hcl SI se commitea (fija versiones de proveedores)
+
+# OCI local config
+oci/
+*.pem
+keys/
+id_rsa
+id_rsa.pub
+.env

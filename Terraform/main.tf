@@ -1,4 +1,4 @@
-/*
+
 # main.tf
 locals {
   cmpt_name_prefix = "A506"
@@ -106,4 +106,3 @@ resource "oci_core_instance" "ic_pub_vm-A" {
     ssh_authorized_keys = join("\n", [for k in var.ic_pub_vm_A.ssh_authorized_keys : chomp(k)])
   }
 }
-*/

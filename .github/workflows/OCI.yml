@@ -11,7 +11,7 @@ jobs:
         working-directory: Terraform
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       
       - name: 'Write Config & Key Files'
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init
+        run: terraform init -backend-config="address=${{ secrets.OCI_STATE_URL }}"
         
       - name: Terraform Validate
         id: validate
@@ -54,5 +54,6 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      # Iteracion 1 (como en el video): solo plan. El apply se anade despues.
+      # - name: Terraform Apply
+      #   run: terraform apply -auto-approve

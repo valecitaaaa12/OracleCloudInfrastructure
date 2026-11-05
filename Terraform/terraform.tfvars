@@ -1,2 +1,3 @@
 # terraform.tfvars
-compartment_id = "ocid1.tenancy.oc1..aaaaaaaah5sadgcgkfkaub3ghdgt6w5nuonrndkdb2dcupyoh3j7cxvy4goa"
+# Root compartment (tenancy) de la cuenta vin3006114 - region sa-saopaulo-1
+compartment_id = "ocid1.tenancy.oc1..aaaaaaaassufon4cmlfztipl3wupkdqlw6rk6r2liohhrpoqnxx2uz5z24iq"

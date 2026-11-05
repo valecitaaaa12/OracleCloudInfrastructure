@@ -10,8 +10,10 @@ terraform {
 
 
 terraform {
+  # Remoto: el estado vive en Object Storage (bucket "terraform-state-bucket").
+  # La URL con Pre-Authenticated Request NO se commitea: se inyecta en init
+  # desde el secreto de GitHub OCI_STATE_URL (-backend-config="address=...").
   backend "http" {
-    address = "https://objectstorage.us-sanjose-1.oraclecloud.com/p/bf640XMjEo6smvwX_N9xCEzv-Y6K4EeuiTF4CznzxjTvbYNE9Qa4qJmc3eKpWNUz/n/axxeo7mon9c6/b/bucket-20240817-1023/o/terraform.tfstate"
     update_method = "PUT"
   }
 }

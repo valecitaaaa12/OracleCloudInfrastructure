@@ -66,13 +66,13 @@ variable "ic_pub_vm_A" {
   default = {
     display_name : "IC_pub_vm-A"
     assign_public_ip : true
-    availability_domain : "RjRj:US-SANJOSE-1-AD-1"
-    image_ocid : "ocid1.image.oc1.us-sanjose-1.aaaaaaaaoy3dg6f2w5edbvow2i7yymcyxlswnut5xf5ffad7us2eft6kp7oq"
+    availability_domain : "kMuU:SA-SAOPAULO-1-AD-1"
+    image_ocid : "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaj27legak4ocun2pyvkyddaepdu5f7y35mcdb7e76lhtvqqawbkuq"
     shape : {
       name          = "VM.Standard.E2.1.Micro"
       ocpus         = 1
       memory_in_gbs = 1
     }
-    ssh_authorized_keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3qjNb/fSTmjHXClwcI2oARKrB5jH7RePjYWVfXPi6rhvOLN5u7spg3RtuU7mJpF6yEFm/p26rYPrGQWCZaHnDtwbE+U5QxGZYibI02S5cCzvULdcFiuno3F5S8b56ir0LEPHAOaNAKjPIOjQpIFBbN1boEXDq9VF6hFCb/YSCs03tnnVwicIi/BnL/5zhIPKLT/LG3DjZLxgcomnichvdxpNaYphqJnBuCjfoS9yvFxdgvzC0JheUMsWa4xgviYC7D9LoQOx3mIVlLOoh0kzcGcbwjfXQrAb2RFv/etFPibvSB0cmaDxWkwlkaHM0ZrnnAgWuSWig+sh/jOTVCUCP rsa-key-20240817"]
+    ssh_authorized_keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCzMcVRtSRzMB9Hn9/MMybkcH7J+hIsgJjesGLEn1wj5a4q0PeOdn8yzmLdvuj7A2uCCi3hxu0tm9G/HqJ8I2gKiS/2iFxqbU1pD6o7WpCfZaWlImdLTlt9BtFZmFQJO6kBx8iTuWv5v6aBEWgnifdWM4GK/igplc8KRN9GyiQQso3EXvWrmlgqJo3SKPIX+PZjSdW92qhPxQq/+ksrhqvvIdYpU3FXBNQSpS6AzMvonPbNLxB30x6Sg1TCtrwozmcPlYLKO20hJO8f3SQD3Loi9vyo/tn0TxQFyyQdHjYyYN8+2emnLue63ANXxDk3x7a5i+x1M65VWNV62dEdUaHI5ARSSaCDGkgnAvrsrc5hh/G1n/nOR6R4rtUudK7BDsJAIQmf1lbhAO4Z3bbbw84sW6ZI3YEJbXGVZeRu8Sc6uCkvtuXF/MshHnTaKu0EuKSAu/6M8eSslFYyJXgdqvuTqNzNAHGaOZtNmRfjOQG/svd5IlUqJw07GmpxTQukGC7EdnTOTffyxkXkPjIZOoQDb7bax2W88lcfXsv6HlFM5RtfINOcrd/6/rqFRZqIl45VYkIV0GQCrpkOxh3egLkBdusrFr32Xp/H6tdJJczkITtVouwWc0mySjgVKH9srChmgYQtPxFNv+hYX2SbwND6xp/pt3hzWUsP5wyo8lW/gw== oci-terraform-key"]
   }
 }
