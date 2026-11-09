@@ -67,13 +67,15 @@ variable "ic_pub_vm_A" {
     display_name : "IC_pub_vm-A"
     assign_public_ip : true
     availability_domain : "kMuU:SA-SAOPAULO-1-AD-1"
-    image_ocid : "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaq2isiurhcds2amx6cobtsqi2zf6so4hpgy76v3dnlprn4fclaceq"
-    # Nota: VM.Standard.E2.1.Micro devolvio "Out of host capacity" en
-    # sa-saopaulo-1 (2 reintentos). Se usa A1.Flex (ARM, Always Free).
+    image_ocid : "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaj27legak4ocun2pyvkyddaepdu5f7y35mcdb7e76lhtvqqawbkuq"
+    # Nota: las formas gratuitas (VM.Standard.E2.1.Micro y VM.Standard.A1.Flex)
+    # devolvieron "500-InternalError, Out of host capacity" en sa-saopaulo-1
+    # en todas las comprobaciones. VM.Standard.E5.Flex si reporta AVAILABLE,
+    # por eso se usa (forma de pago, cubierta por el credito del Free Trial).
     shape : {
-      name          = "VM.Standard.A1.Flex"
+      name          = "VM.Standard.E5.Flex"
       ocpus         = 1
-      memory_in_gbs = 6
+      memory_in_gbs = 16
     }
     ssh_authorized_keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCzMcVRtSRzMB9Hn9/MMybkcH7J+hIsgJjesGLEn1wj5a4q0PeOdn8yzmLdvuj7A2uCCi3hxu0tm9G/HqJ8I2gKiS/2iFxqbU1pD6o7WpCfZaWlImdLTlt9BtFZmFQJO6kBx8iTuWv5v6aBEWgnifdWM4GK/igplc8KRN9GyiQQso3EXvWrmlgqJo3SKPIX+PZjSdW92qhPxQq/+ksrhqvvIdYpU3FXBNQSpS6AzMvonPbNLxB30x6Sg1TCtrwozmcPlYLKO20hJO8f3SQD3Loi9vyo/tn0TxQFyyQdHjYyYN8+2emnLue63ANXxDk3x7a5i+x1M65VWNV62dEdUaHI5ARSSaCDGkgnAvrsrc5hh/G1n/nOR6R4rtUudK7BDsJAIQmf1lbhAO4Z3bbbw84sW6ZI3YEJbXGVZeRu8Sc6uCkvtuXF/MshHnTaKu0EuKSAu/6M8eSslFYyJXgdqvuTqNzNAHGaOZtNmRfjOQG/svd5IlUqJw07GmpxTQukGC7EdnTOTffyxkXkPjIZOoQDb7bax2W88lcfXsv6HlFM5RtfINOcrd/6/rqFRZqIl45VYkIV0GQCrpkOxh3egLkBdusrFr32Xp/H6tdJJczkITtVouwWc0mySjgVKH9srChmgYQtPxFNv+hYX2SbwND6xp/pt3hzWUsP5wyo8lW/gw== oci-terraform-key"]
   }
